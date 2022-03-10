@@ -1,15 +1,23 @@
-import React from 'react';
-import {Text, View, TouchableOpacity} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {
+  Text,
+  Image,
+  View,
+  TouchableOpacity,
+  ScrollView,
+  FlatList,
+} from 'react-native';
 import styles from './Styles';
 import Header from '../../components/header';
 import Hero from '../../components/hero';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {Button} from 'react-native-paper';
+import {Button, Title} from 'react-native-paper';
 import ButtonVertical from '../../components/buttonVertical';
+import Previews from '../../components/previews';
 
 const Home = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Header />
       <Hero />
       <View style={styles.menuHeader}>
@@ -19,7 +27,9 @@ const Home = () => {
         </Button>
         <ButtonVertical icon="information-outline" text="Saiba mais" />
       </View>
-    </View>
+      <Title style={styles.title}>Prévias</Title>
+      <Previews />
+    </ScrollView>
   );
 };
 
