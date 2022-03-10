@@ -40,6 +40,9 @@ const styles = StyleSheet.create({
     marginTop: 40,
     marginLeft: 30,
   },
+  titleSections: {
+    marginLeft: 30,
+  },
 });
 
 export default styles;

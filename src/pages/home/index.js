@@ -14,6 +14,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Button, Title} from 'react-native-paper';
 import ButtonVertical from '../../components/buttonVertical';
 import Previews from '../../components/previews';
+import Sections from '../../components/section';
 
 const Home = () => {
   return (
@@ -29,6 +30,8 @@ const Home = () => {
       </View>
       <Title style={styles.title}>Prévias</Title>
       <Previews />
+      <Title style={styles.titleSections}>Nome da Seção</Title>
+      <Sections />
     </ScrollView>
   );
 };
