@@ -1,8 +1,7 @@
 import React from 'react';
-import Login from './src/pages/login';
-import Home from './src/pages/home';
 import {StatusBar} from 'react-native';
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
+import Routes from './Routes';
 
 const App = () => {
   const theme = {
@@ -18,7 +17,7 @@ const App = () => {
   return (
     <PaperProvider theme={theme}>
       <StatusBar backgroundColor="#000" />
-      <Home />
+      <Routes />
     </PaperProvider>
   );
 };

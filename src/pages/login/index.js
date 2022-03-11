@@ -3,7 +3,7 @@ import {Text, View, Image} from 'react-native';
 import {TextInput, Button} from 'react-native-paper';
 import styles from './Styles';
 
-const Login = () => {
+const Login = ({navigation}) => {
   const [credentials, setCredentials] = useState({
     email: '',
     password: '',
@@ -33,7 +33,7 @@ const Login = () => {
           <Button
             mode="contained"
             styles={styles.marginBottom}
-            onPress={() => console.log('Pressed')}>
+            onPress={() => navigation.navigate('Home')}>
             Entrar
           </Button>
 
