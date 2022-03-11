@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Image, View, TouchableOpacity, ScrollView} from 'react-native';
 import styles from './Styles';
-import api from '../../services';
+import api from '../../services/api';
 import {Title} from 'react-native-paper';
 
 const Sections = () => {

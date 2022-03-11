@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Image, View, TouchableOpacity, ScrollView} from 'react-native';
 import styles from './Styles';
-import api from '../../services';
+import api from '../../services/api';
 
 const Previews = () => {
   const [data, setDatas] = useState([]);
@@ -11,7 +11,7 @@ const Previews = () => {
       const response = await api
         .get()
         .then(res => {
-          //console.log(res.data._id);
+          console.log(res.data._id);
           setDatas(res.data);
         })
         .catch(error => {

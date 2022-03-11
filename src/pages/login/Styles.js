@@ -21,5 +21,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 30,
   },
+  text: {
+    color: 'rgba(255,255,255,0.6)',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
 });
 export default styles;
