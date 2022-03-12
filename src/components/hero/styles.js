@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   hero: {
-    height: 400,
+    height: 500,
     width: '100%',
   },
   logo: {
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   top10Text: {
     alignSelf: 'center',
     position: 'absolute',
-    marginTop: 350,
+    marginTop: 450,
     fontSize: 15,
     color: '#fff',
     zIndex: 10,

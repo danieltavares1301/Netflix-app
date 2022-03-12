@@ -4,36 +4,38 @@ import styles from './Styles';
 import api from '../../services/api';
 import {Title} from 'react-native-paper';
 
-const Sections = () => {
-  const [data, setDatas] = useState([]);
-
-  useEffect(() => {
-    async function loadDatas() {
-      const response = await api
-        .get()
-        .then(res => {
-          //console.log(res.data._id);
-          setDatas(res.data);
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    }
-    loadDatas();
-  }, []);
-
+const Sections = ({film}) => {
   return (
-    <ScrollView horizontal style={styles.container}>
-      {data.map((item, index) => {
-        return (
-          <TouchableOpacity
-            key={index}
-            style={{marginLeft: index === 0 ? 20 : 0, marginRight: 10}}>
-            <Image style={styles.capa} source={{uri: item.image}} />
-          </TouchableOpacity>
-        );
-      })}
-    </ScrollView>
+    <>
+      <Title style={styles.titleSections}>Filmes</Title>
+      <ScrollView horizontal style={styles.container}>
+        {film.map((item, index) => {
+          return (
+            <View>
+              {item.type === 'movie' && (
+                <TouchableOpacity key={index} style={{marginRight: 10}}>
+                  <Image style={styles.capa} source={{uri: item.image}} />
+                </TouchableOpacity>
+              )}
+            </View>
+          );
+        })}
+      </ScrollView>
+      <Title style={styles.titleSections}>Séries</Title>
+      <ScrollView horizontal style={styles.container}>
+        {film.map((item, index) => {
+          return (
+            <View>
+              {item.type === 'series' && (
+                <TouchableOpacity key={index} style={{marginRight: 10}}>
+                  <Image style={styles.capa} source={{uri: item.image}} />
+                </TouchableOpacity>
+              )}
+            </View>
+          );
+        })}
+      </ScrollView>
+    </>
   );
 };
 

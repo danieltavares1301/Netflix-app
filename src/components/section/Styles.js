@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     height: 250,
     marginTop: 10,
     marginBottom: 30,
+    marginLeft: 20,
   },
 
   capa: {
@@ -16,6 +17,9 @@ const styles = StyleSheet.create({
   },
   title: {
     marginTop: 40,
+    marginLeft: 30,
+  },
+  titleSections: {
     marginLeft: 30,
   },
 });
