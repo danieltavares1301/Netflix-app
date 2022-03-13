@@ -2,7 +2,7 @@ import React from 'react';
 import {StatusBar} from 'react-native';
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
 import Routes from './Routes';
-
+import Movie from './src/pages/movie';
 const App = () => {
   const theme = {
     ...DefaultTheme,

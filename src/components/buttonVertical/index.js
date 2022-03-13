@@ -2,7 +2,6 @@ import React from 'react';
 import {Text, TouchableOpacity} from 'react-native';
 import styles from './Styles';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {Button} from 'react-native-paper';
 
 const ButtonVertical = ({icon, text}) => {
   return (
